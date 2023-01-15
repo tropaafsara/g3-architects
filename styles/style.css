@@ -1,4 +1,6 @@
+/* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@500;700&family=Work+Sans:wght@700&display=swap');
+/* common styles */
 body{
     font-family: 'Work Sans', sans-serif;
     width: 1920px;
@@ -28,13 +30,7 @@ nav a{
     padding: 20px;
     color: #424242;
 }
-/* header img{
-    max-width: 75%;
-    padding-left: 240px;
-    padding-right: 240px;
-    margin-bottom: 41px;
-    
-} */
+
 .btn-primary{
     color: #ffffff;
     font-weight: 600;
@@ -54,14 +50,9 @@ height: 64px;
     
     font-size: 64px;
 }
-.banner-des{
- 
-}
+
 .b-banner img{
-    margin-left: 240px;
-    margin-right: 240px;
-    margin-top: 50px;
-    margin-bottom: 41px;
+    margin: 50px 240px 41px 240px;
 }
 /* styles of features */
 .features{
@@ -93,6 +84,12 @@ span.p2{
 .skills{
     width: 586px;
 height: 982px;
+}
+.skill-des p{
+    text-overflow: ellipsis;
+    white-space: wrap;
+    overflow: hidden;
+    
 }
 .skill-info{
     display: grid;
@@ -131,7 +128,9 @@ h2.b{
     width: 342px;
 height: 200px;
 
+
 }
+
 
 .btn-skill.h2{
     font-size: 65px;
@@ -171,6 +170,10 @@ height: 200px;
     margin: 180px 689px 50px 689px;
     
 }
+.sponsor img {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+  }
 .sponsors-list{
     display: flex;
     gap: 155px;
@@ -184,8 +187,40 @@ footer{
 border-radius: 8px;
 margin-right: 240px;
 margin-left: 240px;
-/* paddi-bottom: 216px; */
+
+
 }
 .end{
     padding: 39px 410px;
+}
+/* mobile devices */
+@media only screen and (max-width: 688px) {
+    nav{  
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+    }
+    .banner,.facts,.sponsors,.sponsors-list,.feature-2{
+        text-align: left;
+        padding-right: 529px;
+        margin-left: 0;
+    }
+    .b-banner img{
+        width: 50%;
+        margin: 0;
+    }
+    .feature-1{
+        grid-template-columns: repeat(2, 1fr);    
+    }
+    .features, .second-feature{
+        flex-direction: column;
+        margin-left: 0;
+        align-items: flex-start;
+        
+    }
+    
+    
 }
